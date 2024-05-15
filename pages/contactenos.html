@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
+
     <header>
         <div class="encabezado">
            
@@ -17,7 +18,7 @@
                     <li><a href="habitaciones.html">HABITACIONES</a></li>
                 </UL>
             </NAV>
-       
+
         </div>
     </header>
     <main>
@@ -25,14 +26,18 @@
             <section>
                 <h1>Por favor complete sus datos</h1>
                 <!--Comienza el formulario-->
-                <form action="">
+                <form id="miformulario" >
                     <fieldset>
                         <legend><b>Datos personales:</b></legend>
-                        <label for="nombre"><b>Nombre y apellido*</b></label>
-                        <input type="text" id="nombre" name="nombre" size="10" maxlength="15" required placeholder="Juan Sánchez">
+                        <div class="formulario">
+                                <label for="nombre"><b>Nombre y apellido*</b></label>
+                                <input type="text" id="nombre" name="nombre" size="10" maxlength="15" required placeholder="Juan Sánchez">
+                        </div>
                         <br><br>
-                        <label for="fecLleg"><b>Fecha de Llegada</b></label>
-                        <input type="date" name="fecLleg">
+                        <div class="formulario">
+                            <label for="fecLleg"><b>Fecha de Llegada</b></label>
+                            <input type="date" id="fecLleg" name="fecLleg">
+                        </div>
                         <br><br>
                         <label for="fecSal"><b>Fecha de Salida</b></label>
                         <input type="date" name="fecSal">
@@ -52,41 +57,54 @@
                     <br><br>
                 </form>
             </section>
-            <label for="comentarios"><b>Por favor, déjenos su consulta:</b></label>
-            <br>
-            <textarea name="comentarios" cols="40" rows="10" placeholder="Escriba aqui su consulta"></textarea>
-            <br><br>
-            <label for="almuerzo"><b>Por favor, selecione si elije opción de almuerzo:</b></label>
-            <select name="turno" id="turno">
-                <option value="ComNo">Sin almuerzo</option>
-                <option value="ComSi">Con almuerzo</option>
-            </select>
-            <br><br>
-            <label for="op"><b>Preferencias para las comidas</b></label><br>
-            <input type="checkbox" name="op" value="1">Vegetariano
-            <input type="checkbox" name="op" value="2">Vegano
-            <input type="checkbox" name="op" value="3">Sin T.A.C.C.
-            <br><br>
-            <label for="coch"><b>Solicita cochera</b></label><br>
-            <input type="radio" name="rb" value="1">Si
-            <input type="radio" name="rb" value="2">No
-            <br><br>
-            <label for="huesp"><b>Cantidad de huéspedes <i>(Máximo 5)</i></b></label><br>
-            <input type="number" name="huesp" min="0" max="5" id="huesp">
-            <br><br>
-            <label for="menores"><b>Cantidad de menores de 12 años <i>(Máximo 4)</i></b></label><br>
-            <input type="number" name="menores" min="0" max="4" id="menores">
-            <br><br>
-            <input type="checkbox" name="condicion" required>Acepto los términos y condiciones
-            <br><br>
-            <input type="submit" value="Enviar Datos">
-            <input type="reset" value="Borrar Formulario">
-             </main>
-    <footer>
-        <div>
-            <img src="../img/ig.jpg" alt="logo ig" width="30em"> <img src="../img/tw.jpg" alt="logo tw" width="30em"> <img src="../img/fb.jpg" alt="logo fb" width="30em"> <img src="../img/in.jpg" alt="logo li" width="30em"> <br>
-            &copy; Todos los derechos reservados |2024
-        </div>
-    </footer>
+
+            <form id="miformulario2" >
+                <label for="comentarios"><b>Por favor, déjenos su consulta:</b></label>
+                <br>
+                <textarea name="comentarios"  id="apellido" cols="40" rows="10" placeholder="Escriba aqui su consulta"></textarea>
+            
+                <br><br>
+                <label for="almuerzo"><b>Por favor, selecione si elije opción de almuerzo:</b></label>
+                <select name="turno" id="turno">
+                    <option value="ComNo">Sin almuerzo</option>
+                    <option value="ComSi">Con almuerzo</option>
+                </select>
+                <br><br>
+                <label for="op"><b>Preferencias para las comidas</b></label><br>
+                <input type="checkbox" name="op" value="1">Vegetariano
+                <input type="checkbox" name="op" value="2">Vegano
+                <input type="checkbox" name="op" value="3">Sin T.A.C.C.
+                <br><br>
+                <label for="coch"><b>Solicita cochera</b></label><br>
+                <input type="radio" name="rb" value="1">Si
+                <input type="radio" name="rb" value="2">No
+                <br><br>
+                <label for="huesp"><b>Cantidad de huéspedes <i>(Máximo 5)</i></b></label><br>
+                <input type="number" name="huesp" min="0" max="5" id="huesp">
+                <br><br>
+                <label for="menores"><b>Cantidad de menores de 12 años <i>(Máximo 4)</i></b></label><br>
+                <input type="number" name="menores" min="0" max="4" id="menores">
+                <br><br>
+                <input type="checkbox" name="condicion" required>Acepto los términos y condiciones
+                <br><br>
+            </form>
+
+        <input type="submit" value="Enviar Datos" id="Enviar">
+        <input type="reset" value="Borrar Formulario" id="boton-borrar">
+    </main>
+<footer>
+    <div>
+        <img src="../img/ig.jpg" alt="logo ig" width="30em"> <img src="../img/tw.jpg" alt="logo tw" width="30em"> <img src="../img/fb.jpg" alt="logo fb" width="30em"> <img src="../img/in.jpg" alt="logo li" width="30em"> <br>
+        &copy; Todos los derechos reservados |2024
+    </div>
+</footer>
+
+    
+    <script src="../js/scripts.js"></script>
+  
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
     </body>
 </html>

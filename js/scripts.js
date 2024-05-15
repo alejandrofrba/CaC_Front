@@ -3,17 +3,14 @@
 BORRAR
  */
 
-
 document.addEventListener("DOMContentLoaded", function () {
-  const formulario = document.getElementById("miformulario");
-  const formulario2 = document.getElementById("miformulario2");
-  const botonBorrar = document.getElementById("boton-borrar");
+    const formulario = document.getElementById("mi-formulario");
+    const botonBorrar = document.getElementById("boton-borrar");
   
     botonBorrar.addEventListener("click", function (event) {
       event.preventDefault();
   
-      miformulario.reset();
-      miformulario2.reset();
+      formulario.reset(); 
     });
   });
 
@@ -22,11 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
  */
 
   document.addEventListener("DOMContentLoaded", function () {
-    const enviarDatosButton = document.getElementById("enviar");    // "enviar" es el "ID" del HTML
-    const nombreInput = document.getElementById("nombre");
-    const fecLlegSelect = document.getElementById("fecLleg");
-
+    const calcularDescuentoButton = document.getElementById("calcular-descuento");
+    const categoriaSelect = document.getElementById("categoria");
     const cantidadInput = document.getElementById("cantidad");
+    const nombreInput = document.getElementById("nombre");
     const apellidoInput = document.getElementById("apellido");
     const emailInput = document.getElementById("email");
     const precioTotalSpan = document.getElementById("precio-total");
@@ -56,7 +52,27 @@ document.addEventListener("DOMContentLoaded", function () {
             alert("Por favor, complete todos los campos correctamente.");
             return;
         }
-
+  
+        let descuento = 0;
+  
+        switch (categoria) {
+            case "estudiante":
+                descuento = 0.8; // 80% de descuento para Estudiante
+                break;
+            case "trainee":
+                descuento = 0.5; // 50% de descuento para Trainee
+                break;
+            case "junior":
+                descuento = 0.15; // 15% de descuento para Junior
+                break;
+            default:
+                descuento = 0; // Sin descuento por defecto
+        }
+  
+        const precioUnitario = 200; // Precio base por ticket
+        const precioTotal = cantidad * (precioUnitario - (descuento * precioUnitario));
+  
+        precioTotalSpan.textContent = `${precioTotal.toFixed(2)}`;
     });
   });
   

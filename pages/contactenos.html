@@ -30,7 +30,7 @@
                     <fieldset>
                         <legend><b>Datos personales:</b></legend>
                         <div class="formulario">
-                                <label for="nombre"><b>Nombre y apellido*</b></label>
+                                <label for="nombre" ><b>Nombre y apellido*</b></label>
                                 <input type="text" id="nombre" name="nombre" size="10" maxlength="15" required placeholder="Juan Sánchez">
                         </div>
                         <br><br>
@@ -39,8 +39,10 @@
                             <input type="date" id="fecLleg" name="fecLleg">
                         </div>
                         <br><br>
-                        <label for="fecSal"><b>Fecha de Salida</b></label>
-                        <input type="date" name="fecSal">
+                        <div class="formulario">
+                            <label for="fecSal"><b>Fecha de Salida</b></label>
+                            <input type="date" name="fecSal" id="fecSal">
+                        </div>
                         <br><br>
                         <label for="TipHab"><b>Tipo de habitación</b></label>
                         <select name="TipHab" id="TipHab">
@@ -89,7 +91,7 @@
                 <br><br>
             </form>
 
-        <input type="submit" value="Enviar Datos" id="Enviar">
+        <input type="submit" value="Enviar Datos" id="boton-enviar">
         <input type="reset" value="Borrar Formulario" id="boton-borrar">
     </main>
 <footer>

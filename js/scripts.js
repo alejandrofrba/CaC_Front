@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const formulario = document.getElementById("miformulario");
   const formulario2 = document.getElementById("miformulario2");
   const botonBorrar = document.getElementById("boton-borrar");
-  const botonEnviar = document.getElementById("boton-enviar");  --
+  const botonEnviar = document.getElementById("boton-enviar"); 
 
     botonBorrar.addEventListener("click", function (event) {
       event.preventDefault();
@@ -18,45 +18,44 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-/* 
+
+/*
   VALIDACIONES
  */
 
-  botonEnviar.addEventListener("click", function (event) {
-//    document.addEventListener("DOMContentLoaded", function () {
-    const enviarDatosButton = document.getElementById("enviar");    // "enviar" es el "ID" del HTML
+ document.addEventListener("DOMContentLoaded", function (event) {
+   const enviarDatosButton = document.getElementById("boton-enviar");     // "enviar" es el "ID" del HTML
+  const nombreInput = document.getElementById("nombre");
 
-    const nombreInput = document.getElementById("nombre");
 
-    const fecLlegSelect = document.getElementById("fecLleg");
-    const fecSalSelect = document.getElementById("fecSal");
+const emailInput = document.getElementById("e_mail");
+const comentariosInput = document.getElementById("Comentarios");
+const huespInput = document.getElementById("huesp");
+const menoresInput = document.getElementById("menores");  
 
-    const emailInput = document.getElementById("correo");
-    const cantidadInput = document.getElementById("cantidad");
-
-    
-    enviarDatosButton.addEventListener("click", function (event) {
+  enviarDatosButton.addEventListener("click", function (event) {
       event.preventDefault(); // Evita la recarga de la página por defecto
-  
-/*
-        const email = emailInput.value;
-        const emailRegex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-*/
-        alert("Por favor, complete todos los campos correctamente.", nombreInput);
+
+      const nombre = nombreInput.innerText;
+      console.log("nombre: ", nombre);
+
+      const email = emailInput.innerText;
+      console.log("email: ", email);
+
+      const comentarios = comentariosInput.innerText;
+      console.log("comentarios: ", comentarios);
+
+      const huesp = huespInput.textContent;
+      console.log("huesp: ", huesp);
+
+      const menores =menoresInput.textContent;
+      console.log("menores: ", menores);
 
         if (
-          nombreInput === "" 
-            || nombreInput === ""
-            || fecLlegSelect === ""
-            || fecSalSelect === ""
-            || emailInput === "" 
-            ||  isNaN(cantidadInput)
-            
-//            ||  isNaN(cantidad)
-//            || cantidad <= 0
-/*
-            || emailRegex.match(email) >= 0
-*/
+          email === ""  ||
+          comentarios === ""   ||
+          isNaN(huesp)  ||
+          isNaN(hmenores)
             ) {
             alert("Por favor, complete todos los campos correctamente.");
             return;

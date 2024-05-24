@@ -37,19 +37,19 @@ document.addEventListener("DOMContentLoaded", function () {
   enviarDatosButton.addEventListener("click", function (event) {
       event.preventDefault(); // Evita la recarga de la página por defecto
 
-      const nombre = nombreInput.value; // Get the input value using "value"
+      const nombre = nombreInput.value;
       console.log("nombre: ", nombre);
 
-      const email = emailInput.value; // Get the input value using "value"
+      const email = emailInput.value;
       console.log("email: ", email);
   
-      const comentarios = comentariosInput.value; // Get the textarea value using "value"
+      const comentarios = comentariosInput.value;
       console.log("comentarios: ", comentarios);
   
-      const huesp = huespInput.value; // Get the input value using "value"
+      const huesp = huespInput.value;
       console.log("huesp: ", huesp);
   
-      const menores = menoresInput.value; // Get the input value using "value"
+      const menores = menoresInput.value;
       console.log("menores: ", menores);
   
 

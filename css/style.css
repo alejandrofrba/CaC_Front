@@ -14,7 +14,6 @@
     }
   }
 
-
   #ubi {
     text-align: center;
     position: relative;
@@ -25,6 +24,11 @@
     font-style: italic;
     color:rgb(241, 236, 212) ;
     }
+
+  .social{
+       width: 20em;
+       max-width: 3%;
+  }
 
 
   .fadeIn {
